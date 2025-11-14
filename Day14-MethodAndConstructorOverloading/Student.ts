@@ -9,7 +9,7 @@
         - cannot use "this" keyword to access static variable or method inside class, must use class name
 */
 
-class Student {
+class Students {
     // Read Only Property : can be assigned only once
     readonly studentId: number;
 
@@ -31,12 +31,12 @@ class Student {
 
     // Static Method
     static getSchoolName(): string {
-        return Student.schoolName;
+        return Students.schoolName;
     }
 
     // Mofify using Static Method
     static changeSchoolName(schName : string): string {
-        return Student.schoolName = schName;
+        return Students.schoolName = schName;
     }
 
     // 
@@ -51,31 +51,31 @@ class Student {
             console.log("Age: Not provided");
         }
 
-        let previousSchool = Student.getSchoolName();
+        let previousSchool = Students.getSchoolName();
         console.log(`School Name: ${previousSchool}`);
     }
 }
 
 // Example usage
-let student1 = new Student(1, "John Doe", 20);  // object creation of Student class
-let student2 = new Student(2, "Jane Smith");  // object creation of Student class
+let studentDetail1 = new Students(1, "John Doe", 20);  // object creation of Student class
+let studentDetail2 = new Students(2, "Jane Smith");  // object creation of Student class
 
 // Displaying student information by calling method
 console.log("Student 1 Info:");
-student1.displayInfo();
+studentDetail1.displayInfo();
 console.log("Student 2 Info:");
-student2.displayInfo();
+studentDetail2.displayInfo();
 
 // Modifying static variable using static method
-Student.changeSchoolName("XYZ Academy");
+Students.changeSchoolName("XYZ Academy");
 
 
 // Displaying student information by calling method after changing static variable
 console.log("\n------After changing school name------\n");
 console.log("Student 1 Info:");
-student1.displayInfo();
+studentDetail1.displayInfo();
 console.log("Student 2 Info:");
-student2.displayInfo();
+studentDetail2.displayInfo();
 
 // Trying to modify read-only property will cause an error
-// student1.studentId = 10; // Error: Cannot assign to 'studentId' because it is a read-only property.
+// studentDetail1.studentId = 10; // Error: Cannot assign to 'studentId' because it is a read-only property.

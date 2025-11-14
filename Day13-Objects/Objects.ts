@@ -99,7 +99,7 @@ console.log("--------------------------------------------------");
 // ===============================================================================
 // 3. Using 'type' alias : defining a custom type for the object structure and then using it to create objects
 // This helps in reusability of the object structure in multiple places without redefining the structure each time
-type Person = {
+type PersonDetails = {
     empId: number;
     name: string;
     age: number;
@@ -108,7 +108,7 @@ type Person = {
     getDetails: () => string;
 };
 
-let personObj4: Person = {
+let personObj4: PersonDetails = {
     empId: 104,
     name: "Bob Brown",
     age: 29,
@@ -119,7 +119,7 @@ let personObj4: Person = {
     }
 };
 
-let personObj5: Person = {
+let personObj5: PersonDetails = {
     empId: 105,
     name: "Eve Davis",
     age: 27,

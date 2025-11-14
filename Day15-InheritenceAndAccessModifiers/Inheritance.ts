@@ -76,25 +76,25 @@ myElectricCar.displayInfo(); // Calls the overridden method in ElectricCar
 myElectricCar.parentInfo(); // Calls the parent class method
 console.log(myElectricCar.batteryDescription());
 
-// // Accessing Parent Class Method using super keyword
-// class HybridCar extends car {
-//     fuelEfficiency: number; // in km/l
-//     electricRange: number; // in km
-//     constructor(brand: string, model: string, color: string, fuelEfficiency: number, electricRange: number) {
-//         super(brand, model, color);
-//         this.fuelEfficiency = fuelEfficiency;
-//         this.electricRange = electricRange;
-//     }
-//     displayInfo(): void {
-//         // Call the parent class method using super
-//         super.displayInfo();
-//         console.log(`Fuel Efficiency: ${this.fuelEfficiency} km/l`);
-//         console.log(`Electric Range: ${this.electricRange} km`);
-//     }
-// }
+// Accessing Parent Class Method using super keyword
+class HybridCar extends Car {
+    fuelEfficiency: number; // in km/l
+    electricRange: number; // in km
+    constructor(brand: string, model: string, color: string, fuelEfficiency: number, electricRange: number) {
+        super(brand, model, color);
+        this.fuelEfficiency = fuelEfficiency;
+        this.electricRange = electricRange;
+    }
+    displayInfo(): void {
+        // Call the parent class method using super
+        super.displayInfo();
+        console.log(`Fuel Efficiency: ${this.fuelEfficiency} km/l`);
+        console.log(`Electric Range: ${this.electricRange} km`);
+    }
+}
 
-// let myHybridCar = new HybridCar("Toyota", "Prius", "Blue", 25, 40);
-// myHybridCar.displayInfo(); // Calls the overridden method in HybridCar
+let myHybridCar = new HybridCar("Toyota", "Prius", "Blue", 25, 40);
+myHybridCar.displayInfo(); // Calls the overridden method in HybridCar
 
 
 
